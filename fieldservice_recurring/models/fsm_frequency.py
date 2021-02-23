@@ -49,7 +49,6 @@ class FSMFrequency(models.Model):
         FREQUENCY_SELECT,
         string="Interval Type",
         required=True,
-        track_visibility="onchange",
     )
     is_exclusive = fields.Boolean(
         string="Exclusive Rule?",

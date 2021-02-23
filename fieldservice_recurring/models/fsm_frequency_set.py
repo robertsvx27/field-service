@@ -21,17 +21,14 @@ class FSMFrequencySet(models.Model):
         default="30",
         help="""The number of days from today that the scheduler will generate
             orders for this rule""",
-        track_visibility="onchange",
     )
     buffer_early = fields.Integer(
         string="Early Buffer",
-        track_visibility="onchange",
         help="""The allowed number of days before the computed schedule date
             that an event can be done""",
     )
     buffer_late = fields.Integer(
         string="Late Buffer",
-        track_visibility="onchange",
         help="""The allowed number of days after the computed schedule date
            that an event can be done""",
     )

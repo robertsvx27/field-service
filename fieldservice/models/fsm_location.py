@@ -73,7 +73,6 @@ class FSMLocation(models.Model):
     stage_id = fields.Many2one(
         "fsm.stage",
         string="Stage",
-        track_visibility="onchange",
         index=True,
         copy=False,
         group_expand="_read_group_stage_ids",
