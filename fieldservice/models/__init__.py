@@ -16,11 +16,8 @@ from . import (
     fsm_equipment,
     fsm_order,
     fsm_order_type,
-<<<<<<< HEAD
     fsm_branch,
     fsm_district,
     fsm_region,
-=======
     fsm_person_calendar_filter,
->>>>>>> 13.0upstream
 )
