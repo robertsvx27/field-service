@@ -14,7 +14,7 @@ class FSMFrequencySet(models.Model):
     name = fields.Char("Name", required=True)
     active = fields.Boolean(default=True)
     fsm_frequency_ids = fields.Many2many(
-        "fsm.frequency", track_visibility="onchange", string="Frequency Rules"
+        "fsm.frequency", string="Frequency Rules"
     )
     schedule_days = fields.Integer(
         string="Days Ahead to Schedule",

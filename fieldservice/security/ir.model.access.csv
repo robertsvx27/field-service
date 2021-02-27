@@ -24,3 +24,9 @@ access_fsm_order_type_manager,fsm.order.type.manager,model_fsm_order_type,fields
 access_fsm_calendar_filter,fsm.calendar.filter.user,model_fsm_person_calendar_filter,fieldservice.group_fsm_user,1,1,1,1
 access_fsm_branch,access_fsm_branch,model_fsm_branch,fieldservice.group_fsm_user,1,0,0,0
 access_fsm_branch_manager,fsm.access_fsm_branch_manager,model_fsm_branch,fieldservice.group_fsm_manager,1,1,1,1
+access_fsm_region,access_fsm_region,model_fsm_region,fieldservice.group_fsm_user,1,0,0,0
+access_fsm_region_manager,access_fsm_region_manager,model_fsm_region,fieldservice.group_fsm_manager,1,1,1,1
+access_fsm_wizard,access_fsm_wizard,model_fsm_wizard,fieldservice.group_fsm_user,1,0,0,0
+access_fsm_wizard_manager,access_fsm_wizard_manager,model_fsm_wizard,fieldservice.group_fsm_manager,1,1,1,1
+access_fsm_district,access_fsm_district,model_fsm_district,fieldservice.group_fsm_user,1,0,0,0
+access_fsm_district_manager,access_fsm_district_manager,model_fsm_district,fieldservice.group_fsm_user,1,1,1,1

@@ -68,7 +68,6 @@ class FSMOrder(models.Model):
     stage_id = fields.Many2one(
         "fsm.stage",
         string="Stage",
-        track_visibility="onchange",
         index=True,
         copy=False,
         group_expand="_read_group_stage_ids",
@@ -95,7 +94,6 @@ class FSMOrder(models.Model):
         default=lambda self: self._default_team_id(),
         index=True,
         required=True,
-        track_visibility="onchange",
     )
 
     # Request
@@ -171,7 +169,7 @@ class FSMOrder(models.Model):
     todo = fields.Text(string="Instructions")
 
     # Execution
-    resolution = fields.Text(string="Resolution", placeholder="Resolution of the order")
+    resolution = fields.Text(string="Resolution", help="Resolution of the order")
     date_start = fields.Datetime(string="Actual Start")
     date_end = fields.Datetime(string="Actual End")
     duration = fields.Float(
@@ -205,10 +203,10 @@ class FSMOrder(models.Model):
     zip = fields.Char(related="location_id.zip")
     city = fields.Char(related="location_id.city", string="City")
     state_name = fields.Char(
-        related="location_id.state_id.name", string="State", ondelete="restrict"
+        related="location_id.state_id.name", string="State"
     )
     country_name = fields.Char(
-        related="location_id.country_id.name", string="Country", ondelete="restrict"
+        related="location_id.country_id.name", string="Country"
     )
     phone = fields.Char(related="location_id.phone", string="Location Phone")
     mobile = fields.Char(related="location_id.mobile")

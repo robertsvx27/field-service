@@ -43,7 +43,6 @@ class FSMFrequency(models.Model):
         help="The number of intervals between events",
         default=1,
         required=True,
-        track_visibility="onchange",
     )
     interval_type = fields.Selection(
         FREQUENCY_SELECT,
@@ -64,7 +63,7 @@ class FSMFrequency(models.Model):
         help="""When selected you will be able to specify which calendar day
             of the month the event occurs on""",
     )
-    month_day = fields.Integer(string="Day of Month", track_visibility="onchange")
+    month_day = fields.Integer(string="Day of Month")
 
     use_byweekday = fields.Boolean(
         string="Use Days of Week",

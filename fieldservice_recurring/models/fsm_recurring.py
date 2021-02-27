@@ -34,7 +34,6 @@ class FSMRecurringOrder(models.Model):
         ],
         readonly=True,
         default="draft",
-
     )
     fsm_recurring_template_id = fields.Many2one(
         "fsm.recurring.template",
@@ -77,7 +76,7 @@ class FSMRecurringOrder(models.Model):
 
     )
     person_id = fields.Many2one(
-        "fsm.person", string="Assigned To", index=True, track_visibility="onchange"
+        "fsm.person", string="Assigned To", index=True
     )
 
     @api.depends("fsm_order_ids")
