@@ -133,7 +133,9 @@ class SaleOrderLine(models.Model):
 
     def _prepare_invoice_line(self):
         res = super()._prepare_invoice_line()
-        res.update({
-            'fsm_order_id': self.fsm_order_id.id,
-        })
+        # res.update({
+        #     'fsm_order_id': self.fsm_order_id.id,
+        # })
+        if self.fsm_order_id:
+            res['fsm_order_id'] = self.fsm_order_id.id
         return res

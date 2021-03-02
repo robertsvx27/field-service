@@ -17,7 +17,7 @@ class FSMTag(models.Model):
         string="Company",
         required=True,
         index=True,
-        default=lambda self: self.env.user.company_id,
+        default=lambda self: self.env.company,
         help="Company related to this tag",
     )
 
