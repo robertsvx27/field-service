@@ -60,9 +60,9 @@ class FSMOrder(models.Model):
             for line in rec.stock_request_ids:
                 if line.state == 'draft':
                     if line.order_id:
-                        line.order_id.action_submit()
+                        line.order_id.action_confirm()
                     else:
-                        line.action_submit()
+                        line.action_confirm()
             rec.request_stage = 'submitted'
 
     def action_request_cancel(self):
