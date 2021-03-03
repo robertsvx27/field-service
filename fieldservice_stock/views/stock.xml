@@ -18,5 +18,18 @@
               action="stock.action_view_quants"
               parent="fieldservice.reporting"
               sequence="30"/>
-
+        <menuitem
+            id="menu_fsm_config_stock"
+            name="Inventory"
+            parent="fieldservice.config"
+            sequence="90"
+        />
+        <menuitem
+            id="menu_fsm_picking_type"
+            name="Picking Type"
+            action="stock.action_picking_type_list"
+            parent="menu_fsm_config_stock"
+            sequence="91"
+            groups="fieldservice.group_fsm_manager"
+        />
 </odoo>
